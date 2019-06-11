@@ -1,7 +1,7 @@
 (function(){
     //几分几
-    let divideX=6;
-    let divideY=4;
+    let divideX=4;
+    let divideY=3;
     //布局数组
     let randomArr=[];
     //画布属性
@@ -20,7 +20,7 @@
 
     //载入图片
     function loadImg(){
-        image=new Image(200,112);
+        image=new Image(400,224);
         image.src="img/disney.jpeg";
         image.onload=drawPicture;
         document.body.appendChild(image);
