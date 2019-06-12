@@ -1,4 +1,4 @@
-# Games
+# Web Games
 
 > A list of some small web-games.
 
