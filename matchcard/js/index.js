@@ -18,7 +18,7 @@
         let cardDom,tableDom,tempDom;
         tableDom=document.querySelector(".table");
         cardDom=document.querySelector(".card");
-        tableDom.removeChild(cardDom);
+        tableDom.innerHTML="";
         for(let i=0;i<cardAmount;i++){
             tempDom=cardDom.cloneNode(true);
             let front=tempDom.querySelector(".front");
@@ -100,14 +100,14 @@
     //设置定时器
     function startTimer(){
         let timeDom=document.getElementById("time");
-        let second=100;
+        let second=110;
         timeDom.innerHTML=second;
         timer=setTimeout(function loop(){
             timeDom.innerHTML=--second;
             if(second===0){
                 setTimeout(()=>{
                     alert("游戏失败");
-                    initPage();
+                    location.reload();
                 },0);
             }else{
                 timer=setTimeout(loop,1000);
