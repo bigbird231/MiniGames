@@ -28,7 +28,7 @@
         }
     }
 
-    //随机卡牌
+    //生成随机卡牌
     function randomCard(){
         let maxX=12;
         let maxY=4;

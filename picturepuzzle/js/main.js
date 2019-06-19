@@ -14,7 +14,6 @@
         loadImg();
         initSize();
         randomLayout();
-        //drawPicture();
         initListener();
     }
 
@@ -23,7 +22,7 @@
         image=new Image(400,224);
         image.src="img/disney.jpeg";
         image.onload=drawPicture;
-        document.body.appendChild(image);
+        document.querySelector(".content").appendChild(image);
     }
 
     //初始化单位长度
@@ -67,6 +66,16 @@
                 let sx=value%divideX;
                 context.drawImage(image,sx*divideWidth,sy*divideHeight,divideWidth,divideHeight,dx*divideWidth,dy*divideHeight,divideWidth,divideHeight);
             }
+        }
+        let winGame=true;
+        for(let i=0;i<randomArr.length;i++){
+            if(randomArr[i]!=i){
+                winGame=false;
+                break;
+            }
+        }
+        if(winGame){
+            alert("游戏胜利");
         }
     }
 
