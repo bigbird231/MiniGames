@@ -29,7 +29,17 @@ h1{
 }
 
 .content .table .card{
+    display:inline-block;
     width:80px;
     height: 120px;
-    border:1px solid #fff;
+    margin:20px 50px;
+    background-image: url("../img/deck.png");
+    background-position:0 -480px;
+    cursor:pointer;
+}
+.content .table .card:hover{
+    -webkit-box-shadow: 5px 5px 2px #666;
+    -moz-box-shadow: 5px 5px 2px #666;
+    box-shadow: 5px 5px 2px #666;
+    /*border:2px solid #666;*/
 }
